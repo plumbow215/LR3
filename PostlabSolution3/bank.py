@@ -1,4 +1,6 @@
 """
+Author: Ethan Guardian
+
 File: bank.py
 This module defines the Bank class.
 """

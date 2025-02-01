@@ -1,4 +1,6 @@
 """
+Author: Ethan Guardian
+
 File: savingsaccount.py
 This module defines the SavingsAccount class.
 """

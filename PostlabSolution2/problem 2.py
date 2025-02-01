@@ -12,7 +12,7 @@ class Student:
     def __lt__(self, other):
         return self.name < other.name  # Sorting based on name alphabetically
 
-# Creating a list of students
+
 students = [
     Student("Alice", 20, "A"),
     Student("Bob", 19, "B"),

@@ -1,35 +1,31 @@
 import random
+from student import Student 
 
-class Student:
-    def __init__(self, name, age, grade):
-        self.name = name
-        self.age = age
-        self.grade = grade
+def main():
+    students = [
+        Student("Eve", 5),
+        Student("Frank", 5),
+        Student("Grace", 5),
+        Student("Hank", 5),
+        Student("Ivy", 5)
+    ]
+    
+    for student in students:
+        for i in range(1, 6):
+            student.setScore(i, random.randint(60, 100))
+    
 
-    def __repr__(self):
-        return f"Student(Name: {self.name}, Age: {self.age}, Grade: {self.grade})"
-
-    def __lt__(self, other):
-        return self.name < other.name  # Sorting based on name alphabetically
-
-
-students = [
-    Student("Alice", 20, "A"),
-    Student("Bob", 19, "B"),
-    Student("Charlie", 21, "A"),
-    Student("David", 22, "C"),
-    Student("Eve", 20, "B"),
-]
-
-# Shuffle the student list
-random.shuffle(students)
-print("Shuffled List:")
-for student in students:
-    print(student)
-
-# Sort the student list
-students.sort()
-print("\nSorted List:")
-for student in students:
-    print(student)
-
+    print("Initial Student Data:")
+    for student in students:
+        print(student, "\n")
+    
+    # Find the student with the highest average
+    best_student = max(students, key=lambda s: s.getAverage())
+    print(f"Top Student: {best_student.getName()} with an average score of {best_student.getAverage():.2f}")
+    
+    # Find the student with the lowest average
+    worst_student = min(students, key=lambda s: s.getAverage())
+    print(f"Lowest Performing Student: {worst_student.getName()} with an average score of {worst_student.getAverage():.2f}")
+    
+if __name__ == "__main__":
+    main()

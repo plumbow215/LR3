@@ -19,11 +19,9 @@ def main():
     for student in students:
         print(student, "\n")
     
-    # Find the student with the highest average
     best_student = max(students, key=lambda s: s.getAverage())
     print(f"Top Student: {best_student.getName()} with an average score of {best_student.getAverage():.2f}")
     
-    # Find the student with the lowest average
     worst_student = min(students, key=lambda s: s.getAverage())
     print(f"Lowest Performing Student: {worst_student.getName()} with an average score of {worst_student.getAverage():.2f}")
     

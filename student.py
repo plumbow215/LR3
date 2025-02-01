@@ -1,3 +1,7 @@
+"""
+    Author: Roy Sedfrey
+"""
+
 class Student(object):
 
     def __init__(self, name, number):

@@ -1,3 +1,8 @@
+"""
+Author: Reymond John Vargas
+
+"""
+
 import random
 from student import Student 
 
